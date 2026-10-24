@@ -233,7 +233,7 @@ export default function SelfCare() {
             </div>
           </div>
         ) : (
-          <div className="rounded-3xl border border-primary/30 bg-gradient-to-br from-hero via-card to-card p-6 shadow-soft space-y-4">
+          <div className="bloom-card p-6 space-y-4">
             <div className="flex items-center justify-between pb-2 border-b border-border/50">
               <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary">
                 <Sparkles className="h-4 w-4" />
@@ -354,7 +354,7 @@ export default function SelfCare() {
               return (
                 <div
                   key={prog.id}
-                  className="flex flex-col justify-between rounded-3xl border border-border/70 bg-card p-5 shadow-soft hover:border-primary/40 transition-all space-y-4"
+                  className="bloom-card bloom-card-interactive p-5 space-y-4 flex flex-col justify-between"
                 >
                   <div className="space-y-3">
                     {/* Header tags: Category & Favorite */}
@@ -483,7 +483,7 @@ export default function SelfCare() {
                         {isPlaying ? (
                           <Pause className="h-5 w-5 fill-current" />
                         ) : (
-                          <Play className="h-5 w-5 fill-current ml-0.5" />
+                          <Play className="h-5 w-5 fill-current ms-0.5" />
                         )}
                       </button>
 
@@ -651,7 +651,7 @@ export default function SelfCare() {
                           onClick={() => soundscapeEngine.toggle(snd.id)}
                           className="text-[11px] font-bold px-2.5 py-1 min-h-8"
                         >
-                          <Volume2 className="h-3 w-3 mr-1" />
+                          <Volume2 className="h-3 w-3 me-1" />
                           {t("selfcare.sound.title")}
                         </Btn>
                       </div>
@@ -835,7 +835,7 @@ export default function SelfCare() {
                     disabled={activeStepIndex === 0}
                     className="text-xs font-bold min-h-10 px-4"
                   >
-                    <ChevronLeft className="h-3.5 w-3.5 mr-1" />
+                    <ChevronLeft className="h-3.5 w-3.5 me-1 rtl-mirror" />
                     {t("selfcare.prog.prev")}
                   </Btn>
 
@@ -847,7 +847,7 @@ export default function SelfCare() {
                     {activeStepIndex === activeModalProg.steps.length - 1
                       ? t("selfcare.prog.finish")
                       : t("selfcare.prog.next")}
-                    <ChevronRight className="h-3.5 w-3.5 ml-1" />
+                    <ChevronRight className="h-3.5 w-3.5 ms-1 rtl-mirror" />
                   </Btn>
                 </div>
               </div>

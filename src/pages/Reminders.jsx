@@ -54,7 +54,7 @@ export default function Reminders() {
         {/* Left Column: Master Notification & Automated Reminders */}
         <div className="lg:col-span-6 space-y-4">
           {/* Master Notification Toggle */}
-          <div className="rounded-3xl border border-border/70 bg-card p-5 shadow-soft space-y-3">
+          <div className="bloom-card p-5 sm:p-6 space-y-3">
             <Toggle
               label={t("rem.notify")}
               desc={t("rem.notifyDesc")}
@@ -69,7 +69,7 @@ export default function Reminders() {
           </div>
 
           {/* Quiet Hours Card */}
-          <div className="rounded-3xl border border-border/70 bg-card p-5 shadow-soft space-y-3">
+          <div className="bloom-card p-5 sm:p-6 space-y-3">
             <Toggle
               label={t("rem.quietHours")}
               desc={t("rem.quietHoursDesc")}
@@ -134,7 +134,7 @@ export default function Reminders() {
           </div>
 
           {/* Automated Cycle & Habit Reminders */}
-          <div className="rounded-3xl border border-border/70 bg-card p-5 shadow-soft space-y-4">
+          <div className="bloom-card p-5 sm:p-6 space-y-4">
             <h2 className="font-bold text-xs uppercase tracking-wider text-muted-foreground">
               Cycle & Daily Nudges
             </h2>
@@ -216,7 +216,7 @@ export default function Reminders() {
               className="w-full text-xs font-semibold min-h-11"
               onClick={() => fire("rem.msg.daily")}
             >
-              <Bell className="h-4 w-4 mr-2" />
+              <Bell className="h-4 w-4 me-2" />
               {t("rem.test")}
             </Btn>
           </div>
@@ -224,7 +224,7 @@ export default function Reminders() {
 
         {/* Right Column: Medications & Supplements */}
         <div className="lg:col-span-6 space-y-4">
-          <div className="rounded-3xl border border-border/70 bg-card p-5 shadow-soft space-y-4">
+          <div className="bloom-card p-5 sm:p-6 space-y-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Pill className="h-5 w-5 text-primary" />
@@ -316,7 +316,7 @@ export default function Reminders() {
               </div>
 
               <Btn type="submit" variant="secondary" className="w-full text-xs font-bold min-h-11">
-                <Plus className="h-4 w-4 mr-1.5" />
+                <Plus className="h-4 w-4 me-1.5" />
                 {t("rem.addMed")}
               </Btn>
             </form>
